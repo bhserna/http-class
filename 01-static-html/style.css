@@ -1,0 +1,17 @@
+body {
+  font-family: sans-serif;
+}
+
+.group {
+  list-style: none;
+  padding: 0;
+}
+
+.team {
+  margin-bottom: 5px;
+}
+
+.team > img {
+  width: 30px;
+  vertical-align: bottom;
+}
