@@ -1,0 +1,30 @@
+body {
+  font-family: sans-serif;
+}
+
+.group {
+  list-style: none;
+  padding: 0;
+}
+
+.group th,
+.group td {
+  min-width:  20px;
+  padding-bottom: 5px;
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+  min-width: 30px;
+}
+
+.group th:first-child,
+.group td:first-child {
+  text-align: left;
+  padding-right: 10px;
+}
+
+.team td > img {
+  width: 30px;
+  height: 100%;
+  vertical-align: bottom;
+}

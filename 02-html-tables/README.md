@@ -1,4 +1,4 @@
-# Static HTML
+# HTML Tables
 
 1. Abre la página `groups.html` en tu navegador.
 2. Ve que pasa cuando remueves el tag `<link href="style.css" rel="stylesheet">`
