@@ -2,16 +2,19 @@ body {
   font-family: sans-serif;
 }
 
-.group {
+.movies {
   list-style: none;
   padding: 0;
 }
 
-.team {
+.movie {
   margin-bottom: 5px;
+  height: 45px;
+  line-height: 45px;
 }
 
-.team > img {
+.movie > img {
   width: 30px;
-  vertical-align: bottom;
+  height: 45px;
+  vertical-align: middle;
 }

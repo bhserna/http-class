@@ -1,6 +1,9 @@
 # Basic HTML
 
-1. Abre la página `groups.html` en tu navegador.
+1. Abre la página `moviex.html` en tu navegador.
 2. Ve que pasa cuando remueves el tag `<link href="style.css" rel="stylesheet">`
-3. Utilizando el tag `strong` resalta la frase "Rusia 2018" dentro del tag `p`.
-4. Agrega el Grupo B a la página: Irán, Marruecos, Portugal, España.
+3. Cambia el tag `span` por `strong` para resaltar el nombre de cada película.
+4. Agrega las siguientes películas:
+
+  * Jurassic World, horarios: 3pm, 7pm.
+  * Pantera Negra, horarios: 5pm, 7pm.

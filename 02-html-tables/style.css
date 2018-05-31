@@ -2,29 +2,30 @@ body {
   font-family: sans-serif;
 }
 
-.group {
-  list-style: none;
-  padding: 0;
+.movies {
+  border-collapse: collapse;
 }
 
-.group th,
-.group td {
-  min-width:  20px;
-  padding-bottom: 5px;
-  text-align: center;
-  height: 30px;
-  line-height: 30px;
-  min-width: 30px;
-}
-
-.group th:first-child,
-.group td:first-child {
+.movies td,
+.movies th {
   text-align: left;
-  padding-right: 10px;
+  padding: 10px;
+  border: 1px solid #eee;
 }
 
-.team td > img {
+.movies td:last-child,
+.movies th:last-child {
+  text-align: center;
+}
+
+.movie {
+  margin-bottom: 5px;
+  height: 45px;
+  line-height: 45px;
+}
+
+.movie > img {
   width: 30px;
-  height: 100%;
-  vertical-align: bottom;
+  height: 45px;
+  vertical-align: middle;
 }
