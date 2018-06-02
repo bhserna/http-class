@@ -1,4 +1,4 @@
-# Basic HTML
+# HTML Tables
 
 1. Abre la página `moviex.html` en tu navegador.
 2. Ve que pasa cuando remueves el tag `<link href="style.css" rel="stylesheet">`
@@ -10,3 +10,7 @@
 
 5. Agrega una nueva columna con título "Recomendada" y dentro de cada
    casilla pon la palabra "Sí" a las dós películas que más te gusten.
+
+## Más información:
+
+* https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started

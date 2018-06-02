@@ -1,0 +1,14 @@
+{
+  "name": "03-get-html-through-http",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "ejs": "2.6.1",
+    "express": "4.16.3",
+    "nodemon": "1.17.5"
+  }
+}

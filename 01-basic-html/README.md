@@ -7,3 +7,8 @@
 
   * Jurassic World, horarios: 3pm, 7pm.
   * Pantera Negra, horarios: 5pm, 7pm.
+
+
+## Más información:
+
+* https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started
