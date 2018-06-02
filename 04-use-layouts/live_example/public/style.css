@@ -1,0 +1,20 @@
+body {
+  font-family: sans-serif;
+}
+
+.movies {
+  list-style: none;
+  padding: 0;
+}
+
+.movie {
+  margin-bottom: 5px;
+  height: 45px;
+  line-height: 45px;
+}
+
+.movie > img {
+  width: 30px;
+  height: 45px;
+  vertical-align: middle;
+}
