@@ -1,0 +1,12 @@
+<h3>Cartelera</h3>
+<p>Estas son las películas disponibles.</p>
+
+<ul class="movies">
+  <% movies.forEach((movie) => { %>
+    <li class="movie">
+      <img src="/images/<%= movie.imageName %>"/>
+      <a href="/<%= movie.id %>"><%= movie.name %></a>
+      <small>- Horarios: <%= movie.schedule.join(", ") %></small>
+    </li>
+  <% }); %>
+</ul>

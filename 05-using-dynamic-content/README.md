@@ -22,6 +22,7 @@ Extra:
 
 1. Agregar dos películas más a la cartelera:
 
+
   * Jurassic World, horarios: 3pm, 7pm.
   * Pantera Negra, horarios: 5pm, 7pm.
 
