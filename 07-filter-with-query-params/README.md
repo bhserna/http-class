@@ -10,7 +10,7 @@ Pasos:
 1. Agregar html de con forma para seleccionar la calificación.
 2. Mostrar solo las opciones de calificaciones de las películas en
    cartelera.
-4. Mostrar en la página el filtro que esta actualmente seleccionado.
+3. Mostrar en la página el filtro que esta actualmente seleccionado.
 4. Filtrar las películas según el filtro seleccionado.
 
 ## Ejercicio
@@ -23,7 +23,7 @@ Pasos:
 1. Agregar html de con forma para seleccionar los horarios.
 2. Mostrar solo las opciones de horarios de las películas en
    cartelera.
-4. Mostrar en la página el filtro que esta actualmente seleccionado.
+3. Mostrar en la página el filtro que esta actualmente seleccionado.
 4. Filtrar las películas según el filtro seleccionado.
 
 

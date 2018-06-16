@@ -8,7 +8,7 @@ app.use(express.static('public'));
 app.set('views', './views');
 app.set('view engine', 'ejs');
 
-app.get("/", (req, res) => {
+app.get('/', (req, res) => {
   const selectedScore = req.query.score;
 
   res.render("index", {

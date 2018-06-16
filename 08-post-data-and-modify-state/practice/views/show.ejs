@@ -1,0 +1,38 @@
+<img src="/images/<%= movie.imageName %>"/>
+<h3><%= movie.name %></h3>
+
+<p>
+<strong>Descripción:</strong>
+<br/>
+<%= movie.description %>
+</p>
+
+<p>
+<strong>Horario:</strong>
+<br/>
+<%= movie.schedule.join(", ") %>
+</p>
+
+<p>
+<strong>Calificación:</strong>
+<br/>
+<%= movie.score %>
+</p>
+
+<p>
+<strong>Directores:</strong>
+<br/>
+<%= movie.directors.join(", ") %>
+</p>
+
+<p>
+<strong>Escritores:</strong>
+<br/>
+<%= movie.writers.join(", ") %>
+</p>
+
+<p>
+<strong>Estrellas:</strong>
+<br/>
+<%= movie.stars.join(", ") %>
+</p>
