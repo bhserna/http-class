@@ -3,13 +3,11 @@ const express = require('express');
 const expressLayouts = require('express-ejs-layouts');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
-const session = require('express-session');
 const app = express();
 
 app.use(expressLayouts);
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(session({ secret: 'keyboard cat' }));
 app.use(methodOverride(function (req, res) {
   if (req.body && typeof req.body === 'object' && '_method' in req.body) {
     // look in urlencoded POST bodies and delete it
@@ -21,12 +19,6 @@ app.use(methodOverride(function (req, res) {
 
 app.set('views', './views');
 app.set('view engine', 'ejs');
-
-app.use((req, res, next) => {
-  app.locals.username = req.session.username;
-  app.locals.hasCurrentUser = !!req.session.username;
-  next()
-});
 
 app.get("/", (req, res) => {
   const selectedScore = req.query.score;
@@ -49,11 +41,6 @@ app.post("/user_scores", (req, res) => {
 
 app.patch("/user_scores", (req, res) => {
   Movies.updateUserScore(req.body);
-  res.redirect("/");
-});
-
-app.post("/login", (req, res) => {
-  req.session.username = req.body.username;
   res.redirect("/");
 });
 

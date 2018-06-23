@@ -29,3 +29,4 @@ cada usuario y mostrar las calificaciones que cada usuario ha agregado.
 ## Más información:
 
 * https://github.com/expressjs/session
+* http://expressjs.com/en/api.html#app.locals

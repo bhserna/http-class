@@ -1,0 +1,60 @@
+<h3>Cartelera</h3>
+<p>Estas son las películas disponibles.</p>
+
+<form>
+  <p>
+    <label for="score">Filtrar por calificación:</label>
+    <select name="score">
+      <option value="">Todas</option>
+      <% scores.forEach((score) => { %>
+        <% if (selectedScore === score) { %>
+          <option selected="selected" value="<%= score %>"><%= score %></option>
+        <% } else { %>
+          <option value="<%= score %>"><%= score %></option>
+        <% }; %>
+      <% }); %>
+    </select>
+    <button type="submit">Filtrar</button>
+  </p>
+</form>
+
+<table class="movies">
+  <thead>
+    <tr>
+      <th>Película</th>
+      <th>Horarios</th>
+      <th>Calificación (1 - 5)</th>
+      <th>Tu calificación (1 - 5)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% movies.forEach((movie) => { %>
+      <tr>
+        <td class="movie">
+          <img src="/images/<%= movie.imageName %>"/>
+          <a href="/<%= movie.id %>"><%= movie.name %></a>
+        </td>
+        <td><%= movie.schedule.join(", ") %></td>
+        <td><%= movie.score %></td>
+        <td>
+          <%= movie.userScore || "-" %>
+
+          <form class="user-score-form" action="/user_scores" method="POST">
+            <% if (movie.userScore) { %>
+              <input type="hidden" name="_method" value="PATCH">
+            <% }; %>
+
+            <input type="hidden" name="movie_id" value="<%= movie.id %>"/>
+            <input name="score" type="number" min="1" max="5" step="0.5" value="<%= movie.userScore %>"/>
+
+            <% if (movie.userScore) { %>
+              <button type="submit">Actualizar</button>
+            <% } else { %>
+              <button type="submit">Guardar</button>
+            <% }; %>
+          </form>
+        </td>
+      </tr>
+    <% }); %>
+  </tbody>
+</table>
