@@ -7,7 +7,7 @@ por calificación.
 
 Pasos:
 
-1. Agregar html de con forma para seleccionar la calificación.
+1. Agregar html de la forma para seleccionar la calificación.
 2. Mostrar solo las opciones de calificaciones de las películas en
    cartelera.
 3. Mostrar en la página el filtro que esta actualmente seleccionado.
@@ -20,7 +20,7 @@ funcionalidad para poder filtrar las películas por horario.
 
 Pasos:
 
-1. Agregar html de con forma para seleccionar los horarios.
+1. Agregar html de la forma para seleccionar los horarios.
 2. Mostrar solo las opciones de horarios de las películas en
    cartelera.
 3. Mostrar en la página el filtro que esta actualmente seleccionado.

@@ -1,12 +1,3 @@
-const express = require('express');
-const expressLayouts = require('express-ejs-layouts');
-const app = express();
-
-app.use(expressLayouts);
-app.use(express.static('public'));
-app.set('views', './views');
-app.set('view engine', 'ejs');
-
 const movies = [
   {
     id: "avengers",
@@ -54,21 +45,41 @@ const movies = [
     directors: ["Ron Howard"],
     writers: ["Jonathan Kasdan", "Lawrence Kasdan"],
     stars: ["Alden Ehrenreich", "Woody Harrelson", "Emilia Clarke"]
+  },
+
+  {
+    id: "jurassicworld",
+    imageName: "jurassic-world.jpg",
+    name: "Jurasic World",
+    schedule: ["3pm", "7pm"],
+    score: 4,
+    description: "A new theme park, built on the original site of Jurassic Park, creates a genetically modified hybrid dinosaur, which escapes containment and goes on a killing spree.",
+    directors: ["Colin Trevorrow"],
+    writers: ["Jonathan Kasdan", "Lawrence Kasdan"],
+    stars: ["Chris Pratt", "Bryce Dallas Howard", "Ty Simpkins"]
+  },
+
+  {
+    id: "panteranegra",
+    imageName: "pantera-negra.jpg",
+    name: "Pantera Negra",
+    schedule: ["5pm", "7pm"],
+    score: 3.5,
+    description: "T'Challa, the King of Wakanda, rises to the throne in the isolated, technologically advanced African nation, but his claim is challenged by a vengeful outsider who was a childhood victim of T'Challa's father's mistake.",
+    directors: ["Ryan Coogler"],
+    writers: ["Ryan Coogler", "Joe Robert Cole"],
+    stars: ["Chadwick Boseman", "Michael B. Jordan", "Lupita Nyong'o"]
   }
 ];
 
-app.get('/', (req, res) => {
-  res.render("index", { movies: movies })
-});
+const getScores = () => new Set(movies.map((movie) => movie.score));
 
-app.get('/:movieId', (req, res) => {
-  const movie = movies.find((movie) => movie.id === req.params.movieId);
+const findById = (id) => movies.find((movie) => movie.id === id);
 
-  if (movie) {
-    res.render("show", { movie: movie });
-  } else {
-    res.redirect("/");
-  }
-});
+const getMoviesWithScore = (selectedScore) => {
+  return selectedScore &&
+    movies.filter((movie) => movie.score === selectedScore) ||
+    movies;
+};
 
-app.listen(3000, () => console.log('App listening on port 3000!'));
+module.exports = { getScores, getMoviesWithScore, findById  };

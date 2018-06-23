@@ -3,19 +3,8 @@ body {
 }
 
 .movies {
-  border-collapse: collapse;
-}
-
-.movies td,
-.movies th {
-  text-align: center;
-  padding: 10px;
-  border: 1px solid #eee;
-}
-
-.movies td:first-child,
-.movies th:first-child {
-  text-align: left;
+  list-style: none;
+  padding: 0;
 }
 
 .movie {

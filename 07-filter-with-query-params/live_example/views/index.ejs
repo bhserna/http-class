@@ -1,6 +1,23 @@
 <h3>Cartelera</h3>
 <p>Estas son las películas disponibles.</p>
 
+<form>
+  <p>
+    <label for="score">Filtrar por calificación:</label>
+    <select name="score">
+      <option value="">Todas</option>
+      <% scores.forEach((score) => { %>
+        <% if (score === selectedScore) { %>
+          <option selected="selected"><%= score %></option>
+        <% } else { %>
+          <option><%= score %></option>
+        <% }; %>
+      <% }); %>
+    </select>
+    <button type="submit">Filtrar</button>
+  </p>
+</form>
+
 <table class="movies">
   <thead>
     <tr>
