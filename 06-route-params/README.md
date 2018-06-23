@@ -25,6 +25,15 @@ Requisitos extra:
 1. Usar una tabla para mostrar la información de la película.
 2. La ruta para el detalle de una película debe ser `movies/:id`
 
+## Ejercicio Extra:
+
+Crear una página para ver el detalle de un director. El usuario puede
+acceder a ella por medio de un link en el detalle de una película.
+
+* La ruta debe ser `directors/:directorId`
+* Mostrar en la página una bio del director.
+* ¿Como modelarías los datos para poder mostrarlos?
+
 
 ## Más información:
 
